@@ -1,4 +1,5 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 import Container from '../Container/Container';
 import Section from '../Section/Section';
 import Options from './Options/Options';
@@ -14,7 +15,11 @@ class Feedback extends React.Component {
     positivePercentage: 0,
   };
 
-  static propTypes = {};
+  // static propTypes = {
+  //   good: PropTypes.number,
+  //   neutral: PropTypes.number,
+  //   bad: PropTypes.number,
+  // };
 
   state = {
     good: this.props.good,
@@ -43,7 +48,7 @@ class Feedback extends React.Component {
       <Container>
         <Section title={'Options'}>
           <Options
-            className="Options"
+            // className="Options"
             options={'Please leave Feedback'}
             onLeaveNeutralFeedback={this.handleNeutralFeedback}
             onLeaveBadFeedback={this.handleBadFeedback}
@@ -55,12 +60,12 @@ class Feedback extends React.Component {
             <Notification message="There is no feedback" />
           ) : (
             <Statistics
-              className="Statistics"
+              // className="Statistics"
               good={this.state.good}
               neutral={this.state.neutral}
               bad={this.state.bad}
-              total={this.countTotalFeedback}
-              positivePercentage={this.countPositiveFeedbackPercentage}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage() + `%`}
             />
           )}
         </Section>
