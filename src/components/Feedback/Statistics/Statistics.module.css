@@ -1,0 +1,33 @@
+.Title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.List {
+  composes: Title;
+  list-style: none;
+  padding-left: 30px;
+  margin-top: 15px;
+}
+
+.Item {
+  composes: Title;
+  display: flex;
+}
+
+.Item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.Label {
+  composes: Title;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Amount {
+  composes: Title;
+  font-size: 20px;
+  font-weight: 500;
+}
