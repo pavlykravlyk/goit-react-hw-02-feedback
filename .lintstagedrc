@@ -4,6 +4,6 @@
   ],
   "src/**/*.{js,jsx,ts,tsx}": [
     "prettier --write --ignore-unknown",
-    "eslint --fix"
+    "eslint --cache --fix"
   ]
 }
