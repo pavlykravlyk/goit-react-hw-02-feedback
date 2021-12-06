@@ -1,7 +1,7 @@
-.Title {
+/* .Title {
   font-size: 28px;
   font-weight: 700;
-}
+} */
 
 .List {
   list-style: none;
@@ -16,7 +16,7 @@
   margin-right: 10px;
 }
 
-.Button {
+.Btn {
   cursor: pointer;
   border: none;
   padding: 0;
@@ -25,10 +25,16 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 4px;
-  color: white;
+  text-transform: capitalize;
 }
 
-.Good {
+.Btn:hover,
+.Btn:focus {
+  color: white;
+  background-color: gray;
+}
+
+/* .Good {
   composes: Button;
   background-color: green;
 }
@@ -56,4 +62,4 @@
 .Bad:hover,
 .Bad:focus {
   background-color: darkred;
-}
+} */
