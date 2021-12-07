@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../Statistics/Statistics.module.css';
 
 const Statistics = ({ options }) => {
@@ -12,6 +13,10 @@ const Statistics = ({ options }) => {
       ))}
     </ul>
   );
+};
+
+Statistics.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.array),
 };
 
 export default Statistics;
